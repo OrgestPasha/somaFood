@@ -1,8 +1,9 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener,Directive  } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,15 @@ import { CommonModule } from '@angular/common';
   templateUrl: './root.component.html',
   styleUrls: ['./root.component.scss'] // Corrected to styleUrls
 })
+
+
+
 export class RootComponent {
-  private intervalId: any;
+
+  
+
+
+ 
   mousePosX:number = 0;
   mousePosY:number = 0;
   trueValue=true;
