@@ -1,0 +1,21 @@
+<div
+  style="
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: url('cursor.png'), auto;
+
+    button,
+    a {
+      cursor: url('cursorPointer.png'), pointer;
+    }
+  "
+  (mousemove)="onMouseMove($event)"
+>
+  <div style="width: 80vw">
+    <div class="blob" id="blob" [ngStyle]="blobPosition"></div>
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </div>
+</div>

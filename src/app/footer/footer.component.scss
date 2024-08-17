@@ -1,0 +1,102 @@
+@import "../../styles/_variables";
+
+*{
+    
+    width:100%;
+    
+}
+
+.footer-container{
+    display:flex;
+    flex-direction: column;
+
+    .reservation-content-container{
+        margin-top:50px;
+        display:flex;
+        div{   
+            width:100%;
+            display:flex;                   
+            form{
+                display:flex;
+                flex-direction:column;
+                }
+            input{
+                margin-top:50px;
+                width:80%;
+                    }
+            input[type="submit"]{
+                    width:100px;
+                    aspect-ratio:1/1;
+                    border-radius:50%;
+                    border:1px solid $text-primary;
+                    background:transparent;
+                    font-weight:$thin;
+                    font-size:18px;
+            }
+        }
+    } 
+    
+    
+    .footer-footer{
+        margin-top:200px;
+        position: relative;
+        right:10vw;
+        border-top:1px solid $text-primary ;
+        width:100vw;
+        height:350px;
+        display:flex;
+        justify-content:center;
+        
+
+        .content-container{
+            width:80%;
+            display: grid;
+            grid-template-columns: 25% 10% 50%; 
+            justify-content:space-between;
+
+        div{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            flex-direction:column;
+
+            a{  
+                
+                margin:10px;
+                font-weight:$light;
+                font-size:16px;
+                opacity:0.8;  
+            }
+
+            img{
+                width:200px;
+                height:150px;
+            }
+
+        
+
+            form{
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                height:auto;
+
+                input{
+                    margin-top:20px;
+                    width:70%;
+                        }
+                input[type="submit"]{
+                        width:100px;
+                        aspect-ratio:1/1;
+                        border-radius:50%;
+                        border:1px solid $text-primary;
+                        background:transparent;
+                        font-weight:$thin;
+                        font-size:18px;
+                }
+            }
+        }
+        }
+    
+    }
+}

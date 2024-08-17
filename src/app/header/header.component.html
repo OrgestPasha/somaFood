@@ -1,0 +1,23 @@
+<div class="container">
+  <div>
+    <img
+      src="dropdown.png"
+      class="dropdown-btn"
+      alt=""
+      (click)="handeDropDownClick()"
+    />
+  </div>
+  <div
+    class="dropdown-list"
+    [ngStyle]="showDropdown ? dropdownListActive : dropdownListPassive"
+  >
+    <a (click)="scrollToElement('ourStory')">Our Story</a>
+    <a (click)="scrollToElement('menu')">The Menu</a>
+    <a (click)="scrollToElement('news')">Recent News</a>
+    <a (click)="scrollToElement('reservation')">Reservation</a>
+  </div>
+  <div><img src="logo.png" class="logo" alt="" /></div>
+  <div class="language-container">
+    <a href="" class="playfair-display"><img src="globe.svg" alt="" />EN</a>
+  </div>
+</div>

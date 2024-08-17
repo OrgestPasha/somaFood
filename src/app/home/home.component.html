@@ -1,0 +1,440 @@
+<div class="home-container" id="home">
+  <div class="section-1 section">
+    <img src="bg-1.png" class="bg-1" alt="" />
+    <div class="section-1-content">
+      <h1>Soma</h1>
+      <h1>Slow <span class="windsong">F</span>ood</h1>
+
+      <a (click)="scrollToElement('ourStory')"
+        ><img src="arrowdown.png" alt=""
+      /></a>
+    </div>
+  </div>
+
+  <div class="section-2 section">
+    <p class="light">
+      We prioritize locally sourced, seasonal ingredients prepared with care,
+      reducing their carbon footprint and supporting local producers. Their
+      commitment to sustainability extends to eco-friendly operations and waste
+      reduction, offering conscientious diners a delicious meal that contributes
+      to a healthier planet.
+    </p>
+  </div>
+
+  <div class="section-3 section" id="ourStory">
+    <div class="section-3-header-container">
+      <h1><span class="windsong">O</span>ur Story</h1>
+      <p class="regular">
+        From Seed to Table: <br />The Origins of Soma Slow Food, Established in
+        1998
+      </p>
+    </div>
+
+    <div class="section-3-content">
+      <div class="section-3-image">
+        <img src="bg-3.png" alt="" />
+      </div>
+      <div class="section-3-text">
+        <p class="light">
+          Soma Slow Food traces its roots back to 1998 when it first opened its
+          doors as a pioneering restaurant with a vision for sustainable,
+          locally sourced cuisine. Founded by a group of passionate food
+          enthusiasts, Soma Slow Food aimed to redefine dining by prioritizing
+          quality ingredients from nearby farms and producers.
+        </p>
+        <p class="light">
+          Since its inception, the restaurant has been committed to the "slow
+          food" philosophy, emphasizing the importance of taking time to savor
+          meals made with care and respect for the environment. Over the years,
+          Soma Slow Food has evolved into a beloved culinary destination known
+          for its delicious dishes that celebrate seasonal flavors while
+          supporting the community and promoting sustainable practices.
+        </p>
+        <a (click)="scrollToElement('menu')"
+          ><img src="viewmenu.png" alt=""
+        /></a>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="section-4 section"
+    draggable="false"
+    style="user-select: none"
+    (mousedown)="onMouseDown($event)"
+    (mouseup)="onMouseUp($event)"
+    (mousemove)="onMouseMove($event)"
+    draggable="false"
+  >
+    <div class="section-4-header-container">
+      <h1><span class="windsong">E</span>xplore gallery</h1>
+      <p class="thin">
+        Take a visual journey through the heart of sustainable dining. Each
+        picture captures the essence of the restaurant's rustic elegance and the
+        vibrant flavors of its locally sourced cuisine.
+      </p>
+    </div>
+    <div
+      class="section-4-image-container"
+      data-mouse-down-at="0"
+      id="track"
+      [ngStyle]="trackPositionStyle"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+        class="image-carousel"
+        draggable="false"
+        [ngStyle]="carouselImagePos"
+      />
+      <img
+        src="cr2.png"
+        alt=""
+        class="image-carousel"
+        draggable="false"
+        [ngStyle]="carouselImagePos"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1468070975228-085c1fdd2d3e?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+        class="image-carousel"
+        draggable="false"
+        [ngStyle]="carouselImagePos"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+        class="image-carousel"
+        draggable="false"
+        [ngStyle]="carouselImagePos"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1533143708019-ea5cfa80213e?q=80&w=1806&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+        class="image-carousel"
+        draggable="false"
+        [ngStyle]="carouselImagePos"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1619108977254-314da85774bd?q=80&w=2061&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+        class="image-carousel"
+        draggable="false"
+        [ngStyle]="carouselImagePos"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1620704033114-028772aa85ae?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+        class="image-carousel"
+        draggable="false"
+        [ngStyle]="carouselImagePos"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1518133683791-0b9de5a055f0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+        class="image-carousel"
+        draggable="false"
+        [ngStyle]="carouselImagePos"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1541796512681-800c76e2657e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+        class="image-carousel"
+        draggable="false"
+        [ngStyle]="carouselImagePos"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1558163250-62987a71f81a?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+        class="image-carousel"
+        draggable="false"
+        [ngStyle]="carouselImagePos"
+      />
+    </div>
+    <div class="swipe-img-container">
+      <img src="swipe.png" class="swipe-img" alt="" />
+    </div>
+  </div>
+
+  <div class="section-5 section">
+    <div class="section-5-content">
+      <div class="section-5-image">
+        <img src="bg-5.png" alt="" />
+      </div>
+      <div class="section-5-text">
+        <p class="light secondary-size">
+          “Being a chef at Soma Slow Food is both rewarding and inspiring. The
+          emphasis on local, seasonal ingredients fosters creativity and
+          supports sustainable practices, creating a fulfilling culinary
+          experience within a collaborative and mindful environment. It's a
+          place where chefs can truly make a positive impact through their
+          craft.”
+        </p>
+        <p lass="light">
+          <span class="regular secondary-size">John Doe</span>
+          <br />
+          <span class="thin" style="opacity: 0.6">Professional Chef</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-6 section" id="menu">
+    <div class="section-6-header-container">
+      <h1><span class="windsong">T</span>he Menu</h1>
+      <p class="extra-light">From artisanal starters to hearty mains.</p>
+    </div>
+    <div class="section-6-content-container">
+      <div class="section-6-content-1 menu-item">
+        <img class="menu-item" src="menuItemOne.png" alt="" />
+        <div class="menu-item-text-container">
+          <p class="medium playfair-display" style="font-size: 2rem">
+            Starters
+          </p>
+          <p class="thin" style="font-size: 1rem; margin-top: 10px">
+            From artisanal cheese platters to farm-fresh salads, each starter is
+            thoughtfully crafted to showcase the essence of sustainable cuisine.
+          </p>
+        </div>
+      </div>
+      <div class="section-6-content-2 menu-item v2">
+        <img src="menuItemTwo.png" alt="" />
+        <div class="menu-item-text-container">
+          <p class="medium playfair-display" style="font-size: 2rem">
+            Main Dishes
+          </p>
+          <p class="thin" style="font-size: 1rem; margin-top: 10px">
+            From hearty farm-to-table entrees to innovative plant-based options,
+            each dish reflects the restaurant's dedication to sustainable and
+            delicious dining experiences.
+          </p>
+        </div>
+      </div>
+
+      <div class="section-6-content-2 menu-item">
+        <img src="menuItemThree.png" alt="" />
+        <div class="menu-item-text-container">
+          <p class="medium playfair-display" style="font-size: 2rem">
+            Desserts
+          </p>
+          <p class="thin" style="font-size: 1rem; margin-top: 10px">
+            From rich chocolate tortes to refreshing fruit sorbets, our dessert
+            menu offers a delightful conclusion to your sustainable dining
+            experience.
+          </p>
+        </div>
+      </div>
+
+      <img
+        src="viewmore.png"
+        class="viewmore-btn hover"
+        alt=""
+        style="
+          width: 100px;
+          height: 100px;
+          position: absolute;
+          transform: translate(370px, 530px);
+        "
+      />
+    </div>
+  </div>
+
+  <img src="bg-7.png" class="background-section-7" alt="" />
+  <div class="section-7 section">
+    <div>
+      <p
+        class="medium playfair-display semi-sbold"
+        style="font-size: 2rem; text-align: center"
+      >
+        Want to make your day truly special and unique?
+      </p>
+      <p class="thin" style="font-size: 1rem; margin-top: 10px">
+        Soma Slow Food provides a captivating ambiance for events, blending
+        rustic charm with elegant decor. Guests can enjoy a memorable setting
+        that aligns perfectly with the restaurant's sustainable ethos for
+        private dinners, corporate gatherings, or special celebrations.
+      </p>
+    </div>
+
+    <input type="email" class="input-text" placeholder="Message" />
+    <div class="button-round hover">
+      <p style="width: 100%; text-align: center">Send</p>
+    </div>
+  </div>
+
+  <div class="section-8 section" id="news">
+    <div class="section-8-header-container">
+      <h1><span class="windsong">R</span>ecent News</h1>
+    </div>
+    <div class="section-8-content">
+      <section>
+        <article>
+          <div class="overlay" style="aspect-ratio: 3/2">
+            <p class="overlay-text thin">
+              Join us every Sunday for a Vinyl Listening Session, where music
+              lovers enjoy the warm, authentic sounds of classic records in a
+              relaxed setting. Whether you're a seasoned collector or new to
+              vinyl, this weekly event is the perfect way to unwind and discover
+              new tunes
+            </p>
+          </div>
+          <div></div>
+          <div class="img-div" style="aspect-ratio: 3/2">
+            <img src="news1.png" style="aspect-ratio: 3/2" alt="" />
+          </div>
+
+          <p class="mini-text thin">
+            <span>Soma’s latest</span><span>14.04.2024</span>
+          </p>
+          <p>Every Sunday: Vinyl Listening Session</p>
+        </article>
+        <article>
+          <div class="overlay" style="aspect-ratio: 3/4">
+            <p class="overlay-text thin">
+              Unwind after a long day at our Happy Hour Hangout, happening every
+              evening from 5 PM to 8 PM. Enjoy discounted drinks, great company,
+              and a laid-back atmosphere perfect for catching up with friends or
+              making new ones. Whether you're looking to relax, socialize, or
+              simply take advantage of the happy hour specials, this is the
+              ideal way to kick off your evening. Don't miss out on the fun—join
+              us and make your weeknights something to look forward to!
+            </p>
+          </div>
+          <div class="img-div" style="aspect-ratio: 3/4">
+            <img src="news3.png" alt="" />
+          </div>
+
+          <p class="mini-text thin">
+            <span>Soma’s latest</span><span>14.04.2024</span>
+          </p>
+          <p>5PM-8PM: Happy Hour Hangout</p>
+        </article>
+      </section>
+      <section>
+        <article>
+          <div class="overlay" style="aspect-ratio: 2/3">
+            <p class="overlay-text thin">
+              <b>1. Perfect Your Pasta:</b>
+              <br />
+
+              Always salt your pasta water generously it should taste like the
+              sea. This enhances the flavor of the pasta itself, not just the
+              sauce.
+
+              <br /><br />
+
+              <b>2. Sauce Like a Pro:</b>
+              <br />
+
+              Reserve a cup of pasta water before draining. Adding a splash to
+              your sauce helps it cling to the pasta better and creates a silky
+              texture.
+
+              <br /><br />
+
+              <b>3. Fresh Ingredients are Key:</b>
+              <br />
+
+              Use fresh herbs like basil and parsley. Their vibrant flavors will
+              make your dishes pop and add authenticity to your Italian meal.
+
+              <br /><br />
+
+              <b>4. Master the Garlic:</b>
+              <br />
+
+              For a subtler garlic flavor, gently sauté whole cloves in olive
+              oil to infuse the oil, then remove them before adding other
+              ingredients.
+
+              <br /><br />
+
+              <b>5. Finish with Olive Oil:</b>
+              <br />
+
+              A drizzle of high-quality extra virgin olive oil over your
+              finished dish adds richness and enhances the overall flavor.
+            </p>
+          </div>
+          <div class="img-div" style="aspect-ratio: 2/3">
+            <img src="news2.png" style="aspect-ratio: 2/3" alt="" />
+          </div>
+
+          <p class="mini-text thin">
+            <span>Soma’s latest</span><span>14.04.2024</span>
+          </p>
+          <p>5 Hacks from our Chef: Step by step to a perfect Italian meal</p>
+        </article>
+      </section>
+    </div>
+  </div>
+
+  <div class="section-9 section">
+    <div class="section-9-header-container">
+      <h1><span class="windsong">O</span>ur Reviews</h1>
+    </div>
+    <div class="section-9-content-container">
+      <div class="review-container">
+        <div class="review-head">
+          <div class="star-container">
+            <i
+              class="fa-solid fa-star"
+              style="margin-right: 10px; color: orange"
+              *ngFor="let _ of [].constructor(5); let i = index"
+            ></i>
+          </div>
+          <div class="date-container"><p>4/11/2024</p></div>
+        </div>
+
+        <div class="review-comment">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo
+            quam eget justo consequat, vel tempor arcu sollicitudin. Nullam
+            aliquet mi ac justo malesuada, eget interdum ligula aliquam.
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas.
+          </p>
+        </div>
+
+        <div class="review-person">
+          <img src="person.png" alt="" />
+          <div class="person-name">
+            <p class="regular">Jane Doe</p>
+            <p class="thin" style="font-size: 14px">Lorem Ipsum</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-container">
+        <div class="review-head">
+          <div class="star-container">
+            <i
+              class="fa-solid fa-star"
+              style="margin-right: 10px; color: orange"
+              *ngFor="let _ of [].constructor(4); let i = index"
+            ></i>
+          </div>
+          <div class="date-container"><p>4/11/2024</p></div>
+        </div>
+
+        <div class="review-comment">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo
+            quam eget justo consequat, vel tempor arcu sollicitudin. Nullam
+            aliquet mi ac justo malesuada, eget interdum ligula aliquam.
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas.
+          </p>
+        </div>
+
+        <div class="review-person">
+          <img src="person.png" alt="" />
+          <div class="person-name">
+            <p class="regular">Jane Doe</p>
+            <p class="thin" style="font-size: 14px">Lorem Ipsum</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

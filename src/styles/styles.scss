@@ -1,0 +1,224 @@
+/* You can add global styles to this file, and also import other style files */
+@import "_variables.scss";
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* WebKit Browsers */
+::-webkit-scrollbar {
+    width: 6px; /* Set the width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: black; /* Set the background of the track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: white; /* Set the color of the scrollbar */
+    border-radius: 20px; /* Add some rounding to the scrollbar */
+  }
+  
+  /* Firefox */
+  
+  
+  
+
+
+body{
+    background-color: $background-color;
+    overflow-x:hidden;
+}
+
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .playfair-display {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .windsong {
+    font-family: "WindSong", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+    
+
+*{
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0;
+    color:$text-primary;
+}
+
+
+//font size classes----------------------------------------
+h1{
+    font-size: $title-size;
+    font-weight: $semi-bold;
+    color: $text-primary;
+    font-family: "Playfair Display", serif;
+}
+
+h2{
+    font-size: $secondary-title;
+    font-weight: $semi-bold;
+    color: $text-primary;
+    font-family: "Playfair Display", serif;
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: $semi-bold;
+    color: $text-primary;
+    font-family: "Playfair Display", serif;
+}
+
+p{
+    font-size:$default-font-size;
+    font-weight:$thin;
+}
+
+i{
+    width:25px;
+    height:25px;
+    font-size:25px;
+}
+
+button{
+    width:$button-height-width;
+    height:$button-height-width;
+    border-radius:10px;
+
+    &:hover{
+        cursor:url('/cursorPointer.png'),pointer;
+    }
+}
+
+.button-filled{
+    background-color: $text-primary;
+    border:none;
+    color:$background-color
+}
+
+.button-round{
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      
+}
+
+.button-hollow{
+    transition: 0.3s;
+    color:$text-primary;                  
+    border:1px solid $text-primary;
+    background: none;
+    font-weight:light;
+
+    &:hover{
+        transition: 0.3s;
+        color:$background-color;
+        background-color:$text-primary;
+    }
+}
+
+.secondary-size{
+    font-size: $secondary-size;
+}
+
+.opacity{
+    opacity: 0.7;
+}
+//----------------------------------------
+
+//default animations
+
+.hover{
+    
+    &:hover{
+        cursor:url('/cursorPointer.png'),pointer;
+    }
+    
+}
+
+//text weight classes ----------------------------------------
+.thin {
+    font-weight: $thin;
+}
+.extra-light{
+    font-weight: $extra-Light;
+}
+.light{
+    font-weight:$light;
+}
+.regular{
+    font-weight: $regular;
+}
+.medium{
+    font-weight: $medium;
+}
+.semi-bold{
+    font-weight: $semi-bold;
+}
+.bold{
+    font-weight: $bold;
+}
+.extra-bold{
+    font-weight: $extra-bold;
+}
+.black{
+    font-weight: $black;
+}
+// -------------------------------------
+
+
+//text input field class 
+.input-text{
+    width:480px;
+    font-size: $default-font-size;
+    height:40px;
+    border-bottom:1px solid $text-primary;
+    border-radius:5px; 
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border:none;
+    border-bottom:1px solid $text-primary;
+    font-size: 1rem;
+    border-radius: 0px;
+    outline: none;
+    box-shadow: none;
+    background: none;
+    :focus{
+        border: 0px;
+    }
+}
+
+//other stuff
+
+a{
+    text-decoration: none;
+    cursor:url('/cursorPointer.png'),pointer;
+}

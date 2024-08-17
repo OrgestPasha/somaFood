@@ -1,0 +1,30 @@
+
+
+.blob{
+    width:250px;
+    aspect-ratio:1;
+    background: linear-gradient(to right, rgba(167,72,0,1) 0%, rgb(55, 5, 220) 80%);
+    z-index:-1;
+    border-radius:50%;
+    position: absolute;
+    
+    animation: rotate 10s infinite ease-in-out;
+    transition:250ms ease-out;
+    filter: blur(100px);
+
+    
+}
+
+@keyframes rotate{
+    from{
+        transform: translate(-50%, -50%) rotate(0deg);
+       
+    }
+    50%{
+        scale: 1 1.5;
+    }
+    to{
+        transform: translate(-50%, -50%) rotate(360deg);
+        
+    }
+}
