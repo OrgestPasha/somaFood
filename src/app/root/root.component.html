@@ -12,8 +12,19 @@
   "
   (mousemove)="onMouseMove($event)"
 >
-  <div style="width: 80vw">
-    <div class="blob" id="blob" [ngStyle]="blobPosition"></div>
+  <div
+    [ngStyle]="
+      windowWidth < 576
+        ? { width: '95vw', translateX: '-10%' }
+        : { width: '80vw', translateX: '10%' }
+    "
+    class="everything-container"
+  >
+    <div
+      class="blob"
+      id="blob"
+      [ngStyle]="{ 'top.px': adjustedY, 'left.px': adjustedX }"
+    ></div>
     <app-header></app-header>
     <router-outlet></router-outlet>
     <app-footer></app-footer>

@@ -121,7 +121,7 @@ button{
 .button-round{
     width: 100px;
     height: 100px;
-    border: 1px solid white;
+    border:  1px solid white;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -132,7 +132,7 @@ button{
 .button-hollow{
     transition: 0.3s;
     color:$text-primary;                  
-    border:1px solid $text-primary;
+    border: 1pxsolid $text-primary;
     background: none;
     font-weight:light;
 
@@ -214,6 +214,7 @@ button{
     :focus{
         border: 0px;
     }
+  
 }
 
 //other stuff
@@ -222,3 +223,26 @@ a{
     text-decoration: none;
     cursor:url('/cursorPointer.png'),pointer;
 }
+
+
+@media (max-width: 36rem) {
+    .everything-container{
+        overflow-x: hidden;
+        width:100vw;
+    }
+    h1{
+        font-size:5rem;
+    }
+    h2{
+        font-size:1.7rem;
+    }
+    h3{
+         font-size:1.1rem;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+    b{
+        font-size:1rem;
+    }
+  }
